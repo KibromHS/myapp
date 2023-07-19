@@ -6,6 +6,7 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      pinned: true,
       elevation: 0,
       leading: Builder(
         builder: (context) {
@@ -26,7 +27,7 @@ class MyAppBar extends StatelessWidget {
       ],
       centerTitle: true,
       title: SizedBox(
-        width: MediaQuery.of(context).size.width * 0.5,
+        width: MediaQuery.of(context).size.width * 0.6,
         height: 38,
         child: TextField(
           onTap: () {
@@ -38,15 +39,15 @@ class MyAppBar extends StatelessWidget {
           style: const TextStyle(fontSize: 11),
           decoration: InputDecoration(
             hintText: 'Enter your keyword',
-            hintStyle: const TextStyle(color: Colors.black54, fontSize: 12),
+            hintStyle: const TextStyle(color: Colors.black54, fontSize: 14),
             prefixIcon: const Icon(
               Icons.search_outlined,
               color: Colors.black54,
             ),
             contentPadding: const EdgeInsets.all(12.0),
             border: OutlineInputBorder(
-              // borderSide: BorderSide.none,
-              borderRadius: BorderRadius.circular(10),
+              borderSide: const BorderSide(color: Colors.black12),
+              borderRadius: BorderRadius.circular(6),
             ),
           ),
         ),

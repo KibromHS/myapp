@@ -31,6 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       key: _scaffoldKey,
       drawer: const MyDrawer(),
       body: IndexedStack(
